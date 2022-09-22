@@ -1,0 +1,24 @@
+---
+spring:
+  config.activate.on-profile: default
+cds:
+  datasource:
+    auto-config.enabled: false
+  security:
+    mock:
+      users:
+        - name: sunny13nitk
+          password: iamfine_123
+          additional:
+            firstName: Sunny
+            lastName: Bhardwaj
+            email: sunny13nitk@gmail.com
+        - name: sunny
+          password: pass_sunny
+          roles:
+            - Administrators
+          additional:
+            firstName: Sunny
+            lastName: Bhardwaj
+            email: sunny.bhardwaj@sap.com
+

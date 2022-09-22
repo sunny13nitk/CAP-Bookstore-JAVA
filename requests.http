@@ -1,0 +1,52 @@
+
+### Read Products
+
+GET http://localhost:8080/odata/v4/AdminService/Products
+Accept: application/json
+Authorization: Basic sunny:pass_sunny
+
+
+### Create Order
+
+POST http://localhost:8080/odata/v4/OrdersService/Orders
+Content-Type: application/json
+Authorization: Basic sunny13nitk:iamfine_123
+
+{
+  "items": [
+    {
+      "book_ID": "abed2f7a-c50e-4bc5-89fd-9a00a54b4b16",
+      "amount": 2
+    }
+  ]
+}
+
+### Create Orders: Default User Credentials
+
+
+POST http://localhost:8080/odata/v4/OrdersService/Orders
+Content-Type: application/json
+Authorization: Basic authenticated:
+
+{
+  "items": [
+    {
+      "book_ID": "abed2f7a-c50e-4bc5-89fd-9a00a54b4b16",
+      "amount": 3
+    }
+  ]
+}
+
+
+### Read Orders as sunn13nitk
+
+GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
+Accept: application/json
+Authorization: Basic sunny13nitk:iamfine_123
+
+
+### Read Orders as Administrator : sunny
+
+GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
+Accept: application/json
+Authorization: Basic sunny:pass_sunny

@@ -1,0 +1,8 @@
+---
+applications:
+- name: bookstore
+  path: srv/target/bookstore-exec.jar
+  random-route: true
+  services:
+  - bookstore-hana
+  - bookstore-xsuaa
